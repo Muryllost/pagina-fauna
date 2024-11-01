@@ -2,7 +2,7 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: #f0f7f7;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background-image: url(https://hotelmt.com.br/wp-content/uploads/2018/06/206360-9-curiosidades-sobre-o-pantanal-que-voce-precisa-conhecer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +20,8 @@ header {
     align-items: center;
     height: 70px;
 }
+
+
 
 nav {
    padding: 5px; /* Aumentando o padding para aumentar a área */
@@ -48,43 +50,78 @@ nav a:hover {
     border-radius: 4px; /* Cantos arredondados ao passar o mouse */
 }
 
-#divBusca{
-    background-color:#ffffff;
-    border-radius:10px;
-    width: 160px;
-    height:30px;
-  }
-  
-  #txtBusca{
-    padding-left: 10px;
-    font-size:18px;
-    width:90px;
+/* PESQUISAR */
+#divBusca {
+    background-color: #ffffff; 
+    border: solid 2px #5F9EA0;
+    border-radius: 10px;
+    width: 180px; /* Ajuste da largura para ficar igual à segunda versão */
+    height: 33px;
+    display: flex; /* Usando flex para centralizar o conteúdo */
+    align-items: center;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    width: 80px;
+    height: 30px;
     border-radius: 10px;
     border: none;
-    outline: none; /* Remove a borda padrão do campo */
-  }
+    outline: none;
+}
+
+#txtBusca:focus {
+    outline: none;
+    border: none;
+}
+
+#btnBusca {
+    margin-left: auto;
+    border: none;
+    float: right;
+    height: 32px;
+    border-radius: 0 7px 7px 0;
+    width: 60px;
+    font-weight: bold;
+    background: #5F9EA0;
+}
+
+#divBusca img {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
   
-  /* Estilo quando o input estiver em foco */
-  #txtBusca:focus {
-      outline: none; /* Remove a borda quando o campo está em foco */
-      border: none; /* Certifique-se que nenhuma borda adicional será aplicada */
-  }
-  #btnBusca{
-    border:none;
-    float:right;
-    height:32px;
-    border-radius:0 7px 7px 0;
-    width:70px;
-    font-weight:bold;
-    background:#00000022;
-  }
-  
-  #divBusca img{
+  /* #divBusca img{
     float:left;
     width: 24px; 
     height: 24px; 
     margin-right: 10px; 
   }
+
+  #btnBusca{
+    border:none;
+    float:right;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:60px;
+    font-weight:bold;
+    background:#5F9EA0;
+  }
+  
+  #divBusca img{
+    float:left;
+    width: 24px; 
+  
+    height: 24px; 
+    margin-right: 5px; 
+  }
+   */
 
 section{
   width: 100vw;
@@ -95,24 +132,8 @@ h1 {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*CARROSSEL*/
@@ -124,7 +145,8 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
   position: absolute;
-  top:15%;
+  margin-bottom: 20px
+  top 15%;
   left: 7%;
 }
 
@@ -197,15 +219,32 @@ QUANDO O SLIDE1 ESTIVER CHECADO A MARGEM DEVE SER ZERO, PARA PODER EXIBIR A IMAG
 }
 
 
-
-
-
 /*QUADRADOS*/
+
+.explicacao{
+    background-color: #5d9058;
+    padding: 5px;;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.explicacao h1{
+    color: #000000; /* Cor vibrante, mas elegante */
+    text-align: center;
+    text-shadow:  1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2em; /* Um pouco menor */
+}
+
 
 .quadrado {
   max-width:  500vw;
   margin: 600px auto; /* Centraliza e adiciona espaçamento ao redor */
-  background-color: white;
   padding: 40px; /* Aumenta o espaço interno */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -219,25 +258,31 @@ QUANDO O SLIDE1 ESTIVER CHECADO A MARGEM DEVE SER ZERO, PARA PODER EXIBIR A IMAG
 .blogs {
   display: flex;
   justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
+  border-radius: 50px;
+  margin-bottom: 20px;
 }
 
 .blog-item {
-  background-color: #5d9058;
-  padding: 5px;
-  border: 1px solid #0c0c0c;
-  border-radius: 7px;
-  text-align: center;
-  width: 30%;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+    
+    text-align: center;
+    background-color: #5d9058;
+    padding: 5px;
+    border: 1px solid #0c0c0c;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%; /* Ajuste para que três itens caibam em uma linha */
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .blog-item img {
   width: 200px; 
   height: 200px;
   object-fit: cover; 
+  border-radius: 10% 
 }
 
 
